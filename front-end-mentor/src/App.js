@@ -6,17 +6,32 @@ import { CheckOutlined, CheckCircleTwoTone } from "@ant-design/icons";
 
 function App() {
   const [sliderValue, setSliderValue] = useState(50);
-  // const sliderValue = 30;
   var data = ["Unlimited websites", "100% data ownership", "Email reports"];
 
   const handleSlider = (e) => {
-    setSliderValue(e);
+    setSliderValue(
+      calcDisccount(discount, e.target.value)
+    );
+  };
+
+  const handleSwitch = (e) => {
+    if (discount == 0) {
+      setDiscount(0.25);
+      setSliderValue(
+        sliderValue * 0.75
+      );
+    } else {
+      setSliderValue(
+        sliderValue / 0.75
+      );
+      setDiscount(0);
+    }
   };
 
   return (
     <div className="background">
-    <div className="App">
-      {/* <header className="App-header">
+      <div className="App">
+        {/* <header className="App-header">
       </header> */}
         <body>
           <div>
@@ -36,16 +51,25 @@ function App() {
             </Space>
           </div>
           <div id="slider-container">
-            <Slider
+            {/* <Slider
               style={{ width: 500 }}
               defaultValue={sliderValue}
               onChange={handleSlider}
-            />
+            /> */}
+            <div className="slidecontainer">
+              <input
+                type="range"
+                min="1"
+                max="100"
+                className="slider"
+                onChange={handleSlider}
+              ></input>
+            </div>
           </div>
           <div>
             <Space>
               Monthly Billing
-              <Switch />
+              <Switch onChange={handleSwitch} />
               Yearly Billing
               <div className="discount-container">25% discount</div>
             </Space>
@@ -65,17 +89,20 @@ function App() {
             </Space>
           </div>
         </body>
-      
-      <footer>
-        <div class="attribution">
-          Challenge by{" "}
-          <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">
-            Frontend Mentor
-          </a>
-          . Coded by <a href="#">Your Name Here</a>.
-        </div>
-      </footer>
-    </div>
+
+        <footer>
+          <div class="attribution">
+            Challenge by{" "}
+            <a
+              href="https://www.frontendmentor.io?ref=challenge"
+              target="_blank"
+            >
+              Frontend Mentor
+            </a>
+            . Coded by <a href="#">Your Name Here</a>.
+          </div>
+        </footer>
+      </div>
     </div>
   );
 }
