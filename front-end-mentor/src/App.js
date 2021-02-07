@@ -6,7 +6,13 @@ import { CheckOutlined, CheckCircleTwoTone } from "@ant-design/icons";
 
 function App() {
   const [sliderValue, setSliderValue] = useState(50);
+  const [discount, setDiscount] = useState(0);
+  
   var data = ["Unlimited websites", "100% data ownership", "Email reports"];
+
+  const calcDisccount = (discount, price) => {
+    return price - price * discount
+  }
 
   const handleSlider = (e) => {
     setSliderValue(
