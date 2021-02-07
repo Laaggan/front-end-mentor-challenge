@@ -1,13 +1,14 @@
-import logo from "./logo.svg";
 import "./App.css";
-import { useState } from "react";
+import React, { useState } from "react";
 import { Button, Typography, Space, List, Slider, Switch } from "antd";
 import { CheckOutlined, CheckCircleTwoTone } from "@ant-design/icons";
+import katt from "./images/favicon-32x32.png";
 
 function App() {
   const [sliderValue, setSliderValue] = useState(50);
   const [discount, setDiscount] = useState(0);
-
+  var path = process.env.PUBLIC_URL + "/images/favicon-32x32.png";
+  // debugger;
   var data = ["Unlimited websites", "100% data ownership", "Email reports"];
 
   const calcDisccount = (discount, price) => {
@@ -29,83 +30,72 @@ function App() {
   };
 
   return (
-    <>
+    <body>
       <div className="App">
         {/* <header className="App-header">
       </header> */}
-        <body>
-          <div className="main-app">
-            <div>
-              <Typography.Title>Simple, traffic-based pricing</Typography.Title>
-              <div className="sub-title">
-                <p>Sign-up for our 30-day trial. No credit card required.</p>
+
+        <div className="main-app">
+          <div>
+            <img src={katt}/>
+          </div>
+          <div>
+            <Typography.Title>Simple, traffic-based pricing</Typography.Title>
+            <div className="sub-title">
+              <p>Sign-up for our 30-day trial. No credit card required.</p>
+            </div>
+          </div>
+          <div>
+            <Space>
+              <div className="sub-title" id="price">
+                <Space>
+                  100k Pageviews
+                  <div className="money">{sliderValue}</div>$ /month
+                </Space>
               </div>
-            </div>
-            <div>
-              <Space>
-                <div className="sub-title" id="price">
-                  <Space>
-                    100k Pageviews
-                    <div className="money">{sliderValue}</div>$ /month
-                  </Space>
-                </div>
-              </Space>
-            </div>
-            <div id="slider-container">
-              {/* <Slider
+            </Space>
+          </div>
+          <div id="slider-container">
+            {/* <Slider
               style={{ width: 500 }}
               defaultValue={sliderValue}
               onChange={handleSlider}
             /> */}
-              <div className="slidecontainer">
-                <input
-                  type="range"
-                  min="1"
-                  max="100"
-                  className="slider"
-                  onChange={handleSlider}
-                ></input>
-              </div>
-            </div>
-            <div>
-              <Space>
-                Monthly Billing
-                <Switch onChange={handleSwitch} />
-                Yearly Billing
-                <div className="discount-container">25% discount</div>
-              </Space>
-            </div>
-            <div className="button-container">
-              <Space>
-                <List
-                  dataSource={data}
-                  renderItem={(item) => (
-                    <List.Item>
-                      {/* <Typography.Text><CheckOutlined twoToneColor="#52c41a" /></Typography.Text> {item} */}
-                      <CheckCircleTwoTone twoToneColor="#52c41a" /> {item}
-                    </List.Item>
-                  )}
-                />
-                <Button type="default">Start my trial</Button>
-              </Space>
+            <div className="slidecontainer">
+              <input
+                type="range"
+                min="1"
+                max="100"
+                className="slider"
+                onChange={handleSlider}
+              ></input>
             </div>
           </div>
-        </body>
-
-        <footer>
-          <div class="attribution">
-            Challenge by{" "}
-            <a
-              href="https://www.frontendmentor.io?ref=challenge"
-              target="_blank"
-            >
-              Frontend Mentor
-            </a>
-            . Coded by <a href="#">Your Name Here</a>.
+          <div>
+            <Space>
+              Monthly Billing
+              <Switch onChange={handleSwitch} />
+              Yearly Billing
+              <div className="discount-container">25% discount</div>
+            </Space>
           </div>
-        </footer>
+          <div className="button-container">
+            <Space>
+              <List
+                dataSource={data}
+                renderItem={(item) => (
+                  <List.Item>
+                    {/* <Typography.Text><CheckOutlined twoToneColor="#52c41a" /></Typography.Text> {item} */}
+                    <CheckCircleTwoTone twoToneColor="#52c41a" /> {item}
+                  </List.Item>
+                )}
+              />
+              <Button type="default">Start my trial</Button>
+            </Space>
+          </div>
+        </div>
       </div>
-    </>
+    </body>
   );
 }
 
