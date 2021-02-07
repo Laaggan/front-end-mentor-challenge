@@ -1,0 +1,67 @@
+@import '~antd/dist/antd.css';
+
+h1, p, div{
+  text-align: center;
+  font-family: [Manrope];
+}
+
+p{
+  font-size: 15px;
+}
+
+.slider{
+  color: red;
+}
+
+#slider-container{
+  display: flex;
+  justify-content: center;
+}
+
+.background{
+  background-color: hsl(230, 100%, 99%);
+}
+
+.App-header {
+  background-color: #000;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: #000;
+}
+
+.App{
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+  background-color: #fff;
+}
+
+.button-container{
+  display: flex;
+  font-size: 30px;
+}
+
+.discount-container{
+  color:hsl(15, 100%, 70%);
+  background-color:hsl(14, 92%, 95%);
+  border-radius: 10px;
+  padding: 0px 8px 0px 8px;
+}
+
+.sub-title{
+  color: hsl(225, 20%, 60%);
+}
+
+.sub-title#price{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.money{
+  font-size: 35px;
+}
