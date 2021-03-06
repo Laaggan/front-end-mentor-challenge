@@ -7,8 +7,7 @@ import CustomSlider from './CustomSlider.js';
 function AppCalculation() {
   const [sliderValue, setSliderValue] = useState(50);
   const [discount, setDiscount] = useState(0);
-  var path = process.env.PUBLIC_URL + "/images/favicon-32x32.png";
-  var data = ["Unlimited websites", "100% data ownership", "Email reports"];
+  // var path = process.env.PUBLIC_URL + "/images/favicon-32x32.png";
 
   const calcDisccount = (discount, price) => {
     debugger;
@@ -31,8 +30,7 @@ function AppCalculation() {
   }
 
   return (
-      <div id="app-calculation">
-        <div className="main-app">
+          <>
           <div>
             <Space>
               <div className="sub-title" id="price">
@@ -52,21 +50,7 @@ function AppCalculation() {
               <div className="discount-container">25% discount</div>
             </Space>
           </div>
-          <div className="button-container">
-            <Space>
-              <List
-                dataSource={data}
-                renderItem={(item) => (
-                  <List.Item>
-                    <CheckCircleTwoTone twoToneColor="#52c41a" /> {item}
-                  </List.Item>
-                )}
-              />
-              <Button type="default">Start my trial</Button>
-            </Space>
-          </div>
-        </div>
-      </div>
+          </>
   );
 }
 

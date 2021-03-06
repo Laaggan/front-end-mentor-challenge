@@ -2,8 +2,9 @@ import "./App.css";
 import React, { useState } from "react";
 import { Button, Typography, Space, List, Slider, Switch } from "antd";
 import { CheckOutlined, CheckCircleTwoTone } from "@ant-design/icons";
-import AppCalculation from "./AppCalculation";
 import patternCircles from "./images/patternCircles.svg"
+import AppCalculation from "./AppCalculation";
+import AppFooter from "./AppFooter";
 
 const ContentBox = (props) => {
     debugger;
@@ -16,7 +17,10 @@ const ContentBox = (props) => {
             <p>Sign-up for our 30-day trial. No credit card required.</p>
           </div>
         </div>
+        <div id="app-calculation">
         <AppCalculation />
+        <AppFooter />
+        </div>
     </div>
   );
 };
