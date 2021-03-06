@@ -1,54 +1,56 @@
-@import '~antd/dist/antd.css';
+@import "~antd/dist/antd.css";
 
-h1, p, div{
+h1,
+p,
+div {
   text-align: center;
   font-family: [Manrope];
 }
 
-#content-box{
+#content-box {
   /* background-color: black; */
-    /* background-color: hsl(230, 100%, 99%); */
-  background: url('images/bg-pattern.svg');
+  /* background-color: hsl(230, 100%, 99%); */
+  background: url("images/bg-pattern.svg");
   background-repeat: no-repeat;
   margin: 5em 5em 5em 5em;
   padding-top: 5em 5em 5em 5em;
 }
 
-p{
+p {
   font-size: 15px;
 }
 
-#app-header{
-  background: url('images/patternCircles.svg');
+#app-header {
+  background: url("images/patternCircles.svg");
   background-position: center;
   background-repeat: no-repeat;
   padding-top: 7em;
   height: 300px;
 }
 
-.slider{
+.slider {
   color: red;
 }
 
-#slider-container{
+#slider-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
-#app-calculation{
+#app-calculation {
   margin: auto;
   width: 50%;
-  padding: 10px;
+  border: 20px solid #fff;
   background-color: #fff;
 }
 
-#start-my-trial{
+#start-my-trial {
   font-size: medium;
   border-radius: 5em;
   white-space: nowrap;
   width: 150px;
-  color:  hsl(226, 100%, 87%);
+  color: hsl(226, 100%, 87%);
   background-color: hsl(227, 35%, 25%);
 }
 
@@ -59,29 +61,29 @@ p{
   background: url('images/bg-pattern.svg');
 } */
 
-.button-container{
+.button-container {
   display: flex;
   font-size: 30px;
 }
 
-.discount-container{
-  color:hsl(15, 100%, 70%);
-  background-color:hsl(14, 92%, 95%);
+.discount-container {
+  color: hsl(15, 100%, 70%);
+  background-color: hsl(14, 92%, 95%);
   border-radius: 10px;
   padding: 0px 8px 0px 8px;
 }
 
-.sub-title{
+.sub-title {
   color: hsl(225, 20%, 60%);
 }
 
-.sub-title#price{
+.sub-title#price {
   display: flex;
   flex-direction: row;
   align-items: center;
 }
 
-.money{
+.money {
   font-size: 35px;
 }
 
@@ -97,8 +99,8 @@ p{
   background: #d3d3d3;
   outline: none;
   opacity: 0.7;
-  -webkit-transition: .2s;
-  transition: opacity .2s;
+  -webkit-transition: 0.2s;
+  transition: opacity 0.2s;
 }
 
 .slider:hover {
@@ -111,7 +113,7 @@ p{
   width: 22px;
   height: 13px;
   border: 0;
-  background: url('images/icon-slider.svg');
+  background: url("images/icon-slider.svg");
   cursor: pointer;
 }
 
@@ -119,6 +121,6 @@ p{
   border: 0;
   width: 22px;
   height: 13px;
-  background: url('images/icon-slider.svg');
+  background: url("images/icon-slider.svg");
   cursor: pointer;
 }

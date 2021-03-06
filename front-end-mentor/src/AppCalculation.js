@@ -18,12 +18,10 @@ function AppCalculation() {
   */
 
   const calcDisccount = (discount, price) => {
-    debugger;
     return price - price * discount;
   };
 
   const handleSwitch = (e) => {
-    debugger;
     if (discount == 0) {
       setDiscount(0.25);
       setSliderValue(sliderValue * 0.75);
