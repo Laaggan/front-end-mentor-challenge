@@ -8,7 +8,7 @@ h1, p, div{
 body{
   /* background-color: black; */
     /* background-color: hsl(230, 100%, 99%); */
-  background: url('images/pattern-circles.svg');
+  background: url('images/bg-pattern.svg');
 }
 
 p{
