@@ -2,7 +2,7 @@ import "./App.css";
 import React, { useState } from "react";
 import { Button, Typography, Space, List, Slider, Switch } from "antd";
 import { CheckOutlined, CheckCircleTwoTone } from "@ant-design/icons";
-import katt from "./images/favicon-32x32.png";
+import CustomSlider from './CustomSlider.js';
 
 function App() {
   const [sliderValue, setSliderValue] = useState(50);
@@ -12,14 +12,12 @@ function App() {
   var data = ["Unlimited websites", "100% data ownership", "Email reports"];
 
   const calcDisccount = (discount, price) => {
+    debugger;
     return price - price * discount;
   };
 
-  const handleSlider = (e) => {
-    setSliderValue(calcDisccount(discount, e.target.value));
-  };
-
   const handleSwitch = (e) => {
+    debugger;
     if (discount == 0) {
       setDiscount(0.25);
       setSliderValue(sliderValue * 0.75);
@@ -29,6 +27,10 @@ function App() {
     }
   };
 
+  const handleSlider = (e) => {
+    setSliderValue(calcDisccount(discount, e.target.value))
+  }
+
   return (
     <body>
       <div className="App">
@@ -36,9 +38,6 @@ function App() {
       </header> */}
 
         <div className="main-app">
-          <div>
-            <img src={katt}/>
-          </div>
           <div>
             <Typography.Title>Simple, traffic-based pricing</Typography.Title>
             <div className="sub-title">
@@ -55,22 +54,7 @@ function App() {
               </div>
             </Space>
           </div>
-          <div id="slider-container">
-            {/* <Slider
-              style={{ width: 500 }}
-              defaultValue={sliderValue}
-              onChange={handleSlider}
-            /> */}
-            <div className="slidecontainer">
-              <input
-                type="range"
-                min="1"
-                max="100"
-                className="slider"
-                onChange={handleSlider}
-              ></input>
-            </div>
-          </div>
+          <CustomSlider handleSlider={handleSlider}/>
           <div>
             <Space>
               Monthly Billing

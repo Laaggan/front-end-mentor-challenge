@@ -6,8 +6,9 @@ h1, p, div{
 }
 
 body{
-  background-color: black;
+  /* background-color: black; */
     /* background-color: hsl(230, 100%, 99%); */
+  background: url('images/pattern-circles.svg');
 }
 
 p{
@@ -47,6 +48,7 @@ p{
   width: 1000;
   height: 600;
   background-color: #fff;
+  background: url('images/bg-pattern.svg');
 }
 
 .button-container{
@@ -98,17 +100,17 @@ p{
 .slider::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
-  width: 32px;
-  height: 32px;
+  width: 22px;
+  height: 13px;
   border: 0;
-  background: url('images/favicon-32x32.png');
+  background: url('images/icon-slider.svg');
   cursor: pointer;
 }
 
 .slider::-moz-range-thumb {
   border: 0;
-  width: 32px;
-  height: 32px;
-  background: url('images/favicon-32x32.png');
+  width: 22px;
+  height: 13px;
+  background: url('images/icon-slider.svg');
   cursor: pointer;
 }
