@@ -15,6 +15,15 @@ p{
   font-size: 15px;
 }
 
+#app-header{
+  margin-top: 5em;
+  padding-top: 3em;
+  background: url('images/patternCircles.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 300px;
+}
+
 .slider{
   color: red;
 }
@@ -24,6 +33,7 @@ p{
   flex-direction: column;
   justify-content: center;
 }
+
 
 /* .App-header {
   background-color: #000;
@@ -38,7 +48,6 @@ p{
 
 .App{
   margin: auto;
-  margin-top: 100px;
   width: 50%;
   padding: 10px;
   background-color: #fff;
