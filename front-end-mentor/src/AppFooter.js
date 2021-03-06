@@ -8,8 +8,8 @@ import iconCheck from "./images/iconCheck.svg";
 function AppCalculation() {
   var data = ["Unlimited websites", "100% data ownership", "Email reports"];
   return (
-    <div className="button-container">
-      <Space>
+    <div id="app-footer">
+      <div id="list-container">
         <List
           split={false}
           dataSource={data}
@@ -19,8 +19,10 @@ function AppCalculation() {
             </List.Item>
           )}
         />
+      </div>
+      <div id="button-container">
         <button id="start-my-trial">Start my trial</button>
-      </Space>
+      </div>
     </div>
   );
 }
