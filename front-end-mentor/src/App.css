@@ -43,6 +43,15 @@ p{
   background-color: #fff;
 }
 
+#start-my-trial{
+  font-size: medium;
+  border-radius: 5em;
+  white-space: nowrap;
+  width: 150px;
+  color:  hsl(226, 100%, 87%);
+  background-color: hsl(227, 35%, 25%);
+}
+
 /* .main-app{
   width: 1000;
   height: 600;

@@ -19,7 +19,7 @@ function AppCalculation() {
             </List.Item>
           )}
         />
-        <Button type="default">Start my trial</Button>
+        <button id="start-my-trial">Start my trial</button>
       </Space>
     </div>
   );
