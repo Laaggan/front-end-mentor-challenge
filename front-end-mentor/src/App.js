@@ -6,9 +6,7 @@ import ContentBox from "./ContentBox";
 
 function App() {
   return (
-    <body>
       <ContentBox />
-    </body>
   );
 }
 

@@ -31,8 +31,7 @@ function AppCalculation() {
   }
 
   return (
-    <body>
-      <div className="App">
+      <div id="app-calculation">
         <div className="main-app">
           <div>
             <Space>
@@ -59,7 +58,6 @@ function AppCalculation() {
                 dataSource={data}
                 renderItem={(item) => (
                   <List.Item>
-                    {/* <Typography.Text><CheckOutlined twoToneColor="#52c41a" /></Typography.Text> {item} */}
                     <CheckCircleTwoTone twoToneColor="#52c41a" /> {item}
                   </List.Item>
                 )}
@@ -69,7 +67,6 @@ function AppCalculation() {
           </div>
         </div>
       </div>
-    </body>
   );
 }
 

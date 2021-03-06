@@ -8,7 +8,7 @@ import patternCircles from "./images/patternCircles.svg"
 const ContentBox = (props) => {
     debugger;
     return (
-    <div>
+    <div id="content-box">
         <div id="app-header">
           {/* <img src={patternCircles}></img> */}
           <Typography.Title>Simple, traffic-based pricing</Typography.Title>

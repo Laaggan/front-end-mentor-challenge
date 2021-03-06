@@ -5,10 +5,13 @@ h1, p, div{
   font-family: [Manrope];
 }
 
-body{
+#content-box{
   /* background-color: black; */
     /* background-color: hsl(230, 100%, 99%); */
   background: url('images/bg-pattern.svg');
+  background-repeat: no-repeat;
+  margin: 5em 5em 5em 5em;
+  padding-top: 5em 5em 5em 5em;
 }
 
 p{
@@ -16,11 +19,10 @@ p{
 }
 
 #app-header{
-  margin-top: 5em;
-  padding-top: 3em;
   background: url('images/patternCircles.svg');
   background-position: center;
   background-repeat: no-repeat;
+  padding-top: 7em;
   height: 300px;
 }
 
@@ -34,31 +36,19 @@ p{
   justify-content: center;
 }
 
-
-/* .App-header {
-  background-color: #000;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: #000;
-} */
-
-.App{
+#app-calculation{
   margin: auto;
   width: 50%;
   padding: 10px;
   background-color: #fff;
 }
 
-.main-app{
+/* .main-app{
   width: 1000;
   height: 600;
   background-color: #fff;
   background: url('images/bg-pattern.svg');
-}
+} */
 
 .button-container{
   display: flex;
