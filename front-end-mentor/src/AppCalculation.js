@@ -49,8 +49,7 @@ function AppCalculation() {
   };
 
   const handleSlider = (e) => {
-    const newVal = findClosestValue(e.target.value, costs)
-    setSliderValue(calcDisccount(discount, newVal));
+    setSliderValue(calcDisccount(discount, e.target.value));
   };
 
   return (
@@ -59,8 +58,8 @@ function AppCalculation() {
         <Space>
           <div className="sub-title" id="price">
             <Space>
-              {pageViews[sliderValue]} Pageviews
-              <div className="money">{sliderValue}</div>$ /month
+              {pageViews[findClosestValue(sliderValue, costs)]} Pageviews
+              <div className="money">{findClosestValue(sliderValue, costs)}</div>$ /month
             </Space>
           </div>
         </Space>
