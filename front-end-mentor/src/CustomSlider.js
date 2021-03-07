@@ -9,8 +9,9 @@ const CustomSlider = (props) => {
       <div className="slidecontainer">
         <input
           type="range"
-          min="1"
-          max="100"
+          min="8"
+          max="37"
+          value={props.sliderValue}
           className="slider"
           onChange={props.handleSlider}
         ></input>
