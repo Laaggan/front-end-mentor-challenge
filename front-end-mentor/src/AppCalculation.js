@@ -9,17 +9,8 @@ function AppCalculation() {
   const [discount, setDiscount] = useState(0);
   // var path = process.env.PUBLIC_URL + "/images/favicon-32x32.png";
   
-  // TODO: You should really not have to pad with the last value!
-  const costs = [8, 12, 16, 24, 36, 1000];
-  const pageViews = {"8":"10K", "12":"50K", "16":"100K", "24":"500K", "36":"1M", "1000:":undefined};
-
-  /* 
-  10K pageviews / $8 per month
-  50K pageviews / $12 per month
-  100K pageviews / $16 per month
-  500k pageviews / $24 per month
-  1M pageviews / $36 per month 
-  */
+  const costs = [8, 12, 16, 24, 36];
+  const pageViews = {"8":"10K", "12":"50K", "16":"100K", "24":"500K", "36":"1M"};
 
   useEffect(() => {
     const res = findClosestValue(14, costs)
@@ -27,11 +18,12 @@ function AppCalculation() {
   }, [])
 
   const findClosestValue = (val, list) => {
-    for (let i = 0; i < list.length; i++){
+    for (let i = 1; i < list.length; i++){
       if (list[i] > val){
         return list[i - 1]
       }
     }
+    return list[list.length - 1]
   }
 
   const calcDisccount = (discount, price) => {
