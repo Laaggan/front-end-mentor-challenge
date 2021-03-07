@@ -12,8 +12,8 @@ div {
   /* background-color: hsl(230, 100%, 99%); */
   background: url("images/bg-pattern.svg");
   background-repeat: no-repeat;
-  margin: 5em 5em 5em 5em;
-  padding-top: 5em 5em 5em 5em;
+  /* margin: 5em 5em 5em 5em; */
+  /* padding-top: 5em 5em 5em 5em; */
 }
 
 p {
